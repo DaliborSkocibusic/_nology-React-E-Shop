@@ -1,0 +1,16 @@
+.Item_Image {
+  display: flex;
+  flex-direction: row;
+  // width: 35vh;
+  height: 40vh;
+  justify-content: center;
+}
+
+.DivContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0px;
+}

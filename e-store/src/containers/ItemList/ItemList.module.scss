@@ -1,0 +1,8 @@
+.Container {
+    display: grid;
+    grid-gap: 50px;
+    // height: 30vh;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px;
+}
