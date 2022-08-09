@@ -9,11 +9,12 @@ function NewItemPage() {
     const navigate = useNavigate();
 
     const initialState = {
-        name: "",
+        title: "",
         category: "",
         description: "",
         image: "",
-        name: "",
+        cost: 0,
+        quantity: 0,
     };
 
     const [formState, setFormState] = useState(initialState);
@@ -55,12 +56,32 @@ function NewItemPage() {
                 </div>
 
                 <div>
-                    <label htmlFor="year">Year</label>
+                    <label htmlFor="category">Category</label>
                     <input
-                        id="year"
-                        type="number"
+                        id="cateogry"
+                        type="text"
                         value={formState.category}
                         name="category"
+                        onChange={onInputChange}></input>
+                </div>
+
+                <div>
+                    <label htmlFor="cost">Unit Cost</label>
+                    <input
+                        id="cost"
+                        type="number"
+                        value={formState.cost}
+                        name="cost"
+                        onChange={onInputChange}></input>
+                </div>
+
+                <div>
+                    <label htmlFor="quantity">Quantity</label>
+                    <input
+                        id="quantity"
+                        type="number"
+                        value={formState.quantity}
+                        name="quantity"
                         onChange={onInputChange}></input>
                 </div>
 
@@ -71,6 +92,16 @@ function NewItemPage() {
                         type="text"
                         value={formState.image}
                         name="image"
+                        onChange={onInputChange}></input>
+                </div>
+
+                <div>
+                    <label htmlFor="description">Description</label>
+                    <input
+                        id="description"
+                        type="text"
+                        value={formState.description}
+                        name="description"
                         onChange={onInputChange}></input>
                 </div>
 

@@ -1,6 +1,25 @@
 a {
-  text-decoration: none;
-  &:visited {
-    color: black;
-  }
+    text-decoration: none;
+    &:visited {
+        color: black;
+    }
+}
+
+.imgslidercontainer {
+  background-color: green;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.imgslider {
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.sliderimages {
+    width: auto;
+    height: 30vh;
 }

@@ -23,13 +23,13 @@ export const getItems = async () => {
 
 export const addItem = async (item) => {
     // some logic around url
-    if (!item.imageUrl) {
-        item.imageUrl = "https://www.placecage.com/200/200";
+    if (!item.image) {
+        item.image = "https://www.placecage.com/200/200";
     }
 
     // Get the collection Ref
     const collectionRef = firestore.collection("AmazonMerch");
-    console.log(collectionRef)
+    console.log(collectionRef);
     // use the add method on the collection ref
     // https://firebase.google.com/docs/reference/js/v8/firebase.firestore.CollectionReference#add
     const newItem = await collectionRef.add(item);
