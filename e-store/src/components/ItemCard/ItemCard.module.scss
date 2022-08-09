@@ -6,12 +6,19 @@
   justify-content: center;
 }
 
+h2, p {
+  width: 20vw;
+  text-align: center;
+}
+
 .DivContainer {
+  border: 2px solid grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   // height: 0vh;
-  margin: 0px;
-  width: 30vw;
+  margin: 1.5vh;
+  height: 40vh;
+  width: 25vw;
 }

@@ -1,3 +1,5 @@
+import "./global.scss";
+
 const images = [
     {
         id: 1,

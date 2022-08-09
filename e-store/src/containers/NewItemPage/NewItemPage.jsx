@@ -2,6 +2,7 @@ import { useState } from "react";
 import { addItem } from "../../services/items";
 
 import { useNavigate } from "react-router-dom";
+import styles from "./NewItemPage.module.scss";
 
 function NewItemPage() {
     // TODO - set up image upload
@@ -44,82 +45,90 @@ function NewItemPage() {
 
     return (
         <main>
-            <h1>Add New Item</h1>
-            <form onSubmit={onFormSubmit}>
-                <div>
-                    <label htmlFor="title">Title</label>
-                    <input
-                        id="title"
-                        type="text"
-                        value={formState.title}
-                        onChange={onInputChange}
-                        name="title"></input>
-                </div>
+            <div classname={styles.OuterContainer}>
+                <div className={styles.Container}>
+                    <h1>Add New Item</h1>
+                    <form onSubmit={onFormSubmit}>
+                        <div>
+                            <label htmlFor="title">Title</label>
+                            <input
+                                id="title"
+                                type="text"
+                                value={formState.title}
+                                onChange={onInputChange}
+                                name="title"></input>
+                        </div>
 
-                <div>
-                    <label htmlFor="category">Category</label>
-                    <input
-                        id="cateogry"
-                        type="text"
-                        value={formState.category}
-                        name="category"
-                        onChange={onInputChange}></input>
-                </div>
+                        <div>
+                            <label htmlFor="category">Category</label>
+                            <input
+                                id="cateogry"
+                                type="text"
+                                value={formState.category}
+                                name="category"
+                                onChange={onInputChange}></input>
+                        </div>
 
-                <div>
-                    <label htmlFor="cost">Unit Cost</label>
-                    <input
-                        id="cost"
-                        type="number"
-                        value={formState.cost}
-                        name="cost"
-                        onChange={onInputChange}></input>
-                </div>
+                        <div>
+                            <label htmlFor="cost">Unit Cost</label>
+                            <input
+                                id="cost"
+                                type="number"
+                                value={formState.cost}
+                                name="cost"
+                                onChange={onInputChange}></input>
+                        </div>
 
-                <div>
-                    <label htmlFor="quantity">Quantity</label>
-                    <input
-                        id="quantity"
-                        type="number"
-                        value={formState.quantity}
-                        name="quantity"
-                        onChange={onInputChange}></input>
-                </div>
+                        <div>
+                            <label htmlFor="quantity">Quantity</label>
+                            <input
+                                id="quantity"
+                                type="number"
+                                value={formState.quantity}
+                                name="quantity"
+                                onChange={onInputChange}></input>
+                        </div>
 
-                <div>
-                    <label htmlFor="image">Image URL</label>
-                    <input
-                        id="image"
-                        type="text"
-                        value={formState.image}
-                        name="image"
-                        onChange={onInputChange}></input>
-                </div>
+                        <div>
+                            <label htmlFor="image">Image URL</label>
+                            <input
+                                id="image"
+                                type="text"
+                                value={formState.image}
+                                name="image"
+                                onChange={onInputChange}></input>
+                        </div>
 
-                <div>
-                    <label htmlFor="description">Description</label>
-                    <input
-                        id="description"
-                        type="text"
-                        value={formState.description}
-                        name="description"
-                        onChange={onInputChange}></input>
-                </div>
+                        <div>
+                            <label htmlFor="description">Description</label>
+                            <input
+                                id="description"
+                                type="text"
+                                value={formState.description}
+                                name="description"
+                                onChange={onInputChange}></input>
+                        </div>
 
-                <div>
-                    <label htmlFor="favourite">Favourite</label>
-                    <input
-                        id="favourite"
-                        type="boolean"
-                        value={formState.favourite}
-                        name="favourite"
-                        onChange={onInputChange}></input>
-                </div>
+                        <div>
+                            <label htmlFor="favourite">Favourite</label>
+                            <input
+                                id="favourite"
+                                type="boolean"
+                                value={formState.favourite}
+                                name="favourite"
+                                onChange={onInputChange}></input>
+                        </div>
 
-                <div>
-                    <input id="submit" type="submit" value="Create Item" />
+                        <div>
+                            <input
+                                id="submit"
+                                type="submit"
+                                value="Create Item"
+                            />
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </main>
     );
 }

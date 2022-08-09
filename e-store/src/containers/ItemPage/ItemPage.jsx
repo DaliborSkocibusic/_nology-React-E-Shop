@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { deleteItemById, getItemById } from "../../services/items";
 
+import styles from "./ItemPage.module.scss";
+
 function ItemPage() {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -24,46 +26,34 @@ function ItemPage() {
         item.quantity
             ? alert(`Added 1 x ${item.title} to cart ${item.quantity - 1} left`)
             : alert("Out of stock");
-
-        // getItemById(id).then(
-        //     //(value) =>
-        //     (value) => console.log(value.quantity - 1),
-        // );
-        //     value.quantity > 0
-        //         ? alert(
-        //               "Added 1 x " +
-        //                   value.title +
-        //                   " to cart" +
-        //                   value.quantity -
-        //                   1 +
-        //                   " left",
-        //           )
-        //         : alert("Out of stock"),
-        // );
     };
 
     return (
-        <>
+        <div className={styles.OuterContainer}>
             {loading ? (
                 <h1>Loading</h1>
             ) : (
-                <div>
+                <div className={styles.Container}>
                     <h1>{item.title}</h1>
-                    <p>
-                        Cost - ${item.cost}
-                        <span> Quantity: {item.quantity}</span>
+                    <div className={styles.TopInnerContainer}>
+                        <p>Cost ${item.cost}</p>
+                        <p>Quantity: {item.quantity}</p>
+                        <p>Quantity: {item.quantity}</p>
+                        <p>Favourite: {`${item.favourite}`}</p>
+                    </div>
+                    <img src={item.image} alt={item.name} width={250}/>
+                    <p className={styles.ParagraphContainer}>
+                        {item.description}
                     </p>
-                    <p>Quantity: {item.quantity}</p>
-                    <p>Favourite: {item.favourite.value}</p>
-                    <img src={item.image} alt={item.name} />
-                    <p>{item.description}</p>
-                    <button onClick={onButtonClickAddToCart}>
-                        Add To Cart
-                    </button>
-                    <button onClick={onButtonClickDelete}>Delete</button>
+                    <div className="ButtonContainer">
+                        <button onClick={onButtonClickAddToCart}>
+                            Add To Cart
+                        </button>
+                        <button onClick={onButtonClickDelete}>Delete</button>
+                    </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }
 

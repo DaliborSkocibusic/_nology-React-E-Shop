@@ -12,9 +12,9 @@ function ItemCard({ item }) {
                 <br />
             </h2>
             <p>
-                {item.description}
+                Description: {item.description}
                 <br />
-                <br />${item.cost}
+                <br />Cost ${item.cost}
                 <br />
                 Number Available: {item.quantity}
                 <br />

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./ItemList.module.scss";
 import { getItems } from "../../services/items";
-import { sortItemsAlphabetically } from "./utils";
 import ItemCard from "../../components/ItemCard/ItemCard";
 function ItemList() {
     const [items, setItems] = useState([]);

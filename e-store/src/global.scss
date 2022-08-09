@@ -6,20 +6,14 @@ a {
 }
 
 .imgslidercontainer {
-  background-color: green;
-    justify-content: space-around;
-    align-items: center;
-    width: auto;
-    height: auto;
-}
-
-.imgslider {
-    justify-content: center;
-    width: auto;
-    height: 30vh;
+    margin: 5vh;
+    text-align: center;
 }
 
 .sliderimages {
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
     width: auto;
-    height: 30vh;
+    height: 10vh;
 }
