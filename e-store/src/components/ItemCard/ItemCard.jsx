@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./ItemCard.module.scss";
 import { NavLink } from "react-router-dom";
 
-function ItemCard(props) {
-    const { item } = props;                                                
+function ItemCard({ item }) {
+    // const { item } = props;
 
     return (
         <div className={styles.DivContainer}>
@@ -15,7 +15,10 @@ function ItemCard(props) {
                 {item.description}
                 <br />
                 <br />${item.cost}
-                <br />Number Available: {item.quantity}
+                <br />
+                Number Available: {item.quantity}
+                <br />
+                Favourite: {`${item.favourite}`}
             </p>
             <img
                 className={styles.Item_Image}

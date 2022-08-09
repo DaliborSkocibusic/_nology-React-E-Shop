@@ -15,6 +15,7 @@ function NewItemPage() {
         image: "",
         cost: 0,
         quantity: 0,
+        favourite: false,
     };
 
     const [formState, setFormState] = useState(initialState);
@@ -102,6 +103,16 @@ function NewItemPage() {
                         type="text"
                         value={formState.description}
                         name="description"
+                        onChange={onInputChange}></input>
+                </div>
+
+                <div>
+                    <label htmlFor="favourite">Favourite</label>
+                    <input
+                        id="favourite"
+                        type="boolean"
+                        value={formState.favourite}
+                        name="favourite"
                         onChange={onInputChange}></input>
                 </div>
 

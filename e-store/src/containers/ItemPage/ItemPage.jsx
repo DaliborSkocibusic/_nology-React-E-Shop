@@ -19,10 +19,16 @@ function ItemPage() {
     };
 
     const onButtonClickAddToCart = (event) => {
-        getItemById(id).then(
-            //(value) =>
-            (value) => console.log(value.quantity - 1),
-        );
+        // console.log(item.quantity);
+        console.log(item.quantity);
+        item.quantity
+            ? alert(`Added 1 x ${item.title} to cart ${item.quantity - 1} left`)
+            : alert("Out of stock");
+
+        // getItemById(id).then(
+        //     //(value) =>
+        //     (value) => console.log(value.quantity - 1),
+        // );
         //     value.quantity > 0
         //         ? alert(
         //               "Added 1 x " +
@@ -48,6 +54,7 @@ function ItemPage() {
                         <span> Quantity: {item.quantity}</span>
                     </p>
                     <p>Quantity: {item.quantity}</p>
+                    <p>Favourite: {item.favourite.value}</p>
                     <img src={item.image} alt={item.name} />
                     <p>{item.description}</p>
                     <button onClick={onButtonClickAddToCart}>

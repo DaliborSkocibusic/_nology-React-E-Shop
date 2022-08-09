@@ -7,7 +7,7 @@ a {
 
 .imgslidercontainer {
   background-color: green;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: auto;
     height: auto;
@@ -16,7 +16,7 @@ a {
 .imgslider {
     justify-content: center;
     width: auto;
-    height: auto;
+    height: 30vh;
 }
 
 .sliderimages {
